@@ -16,19 +16,49 @@ export default class NewClass extends cc.Component {
     @property(cc.Label)
     label: cc.Label = null;
 
-    @property
-    text: string = 'hello';
+    @property(cc.Prefab)
+    trung_Prefab: cc.Prefab = null;
     @property({}) number = 0;
-
+    time: number;
     // LIFE-CYCLE CALLBACKS:
-
-    // onLoad () {}
-
-    start () {
-        cc.log("Hello");
-        cc.log("Lan 2");
-
+    getNewStarPosition()
+    {
+        
+        var RandY = 500;
+        var maxX = this.node.width / 2;
+        var RandX = cc.randomMinus1To1() * maxX;
+        return cc.p(RandX,RandY);
+        
     }
 
-    // update (dt) {}
+    spawNewStarPosition()
+    {
+        //cc.log("vaof spaw");
+        var newStar = cc.instantiate(this.trung_Prefab);
+
+        this.node.addChild(newStar);
+
+        newStar.setPosition(this.getNewStarPosition());
+        
+        //newStar.getComponent('trung').game = this;
+
+       
+    }
+    onLoad () {
+        //cc.log("vaof");
+        this.time = 0;
+        this.spawNewStarPosition();
+    }
+
+    start () {
+       
+    }
+
+     update (dt) {
+         this.time += dt;
+         if(Math.floor(this.time) == 2){
+             this.spawNewStarPosition();
+             this.time = 0;
+         }
+     }
 }
