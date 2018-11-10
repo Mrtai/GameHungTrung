@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "d6cc56bd-ec73-489c-bba5-35adb334c01a",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "166171_cloudy-with-a-chance-of-meatballs-2-revenge-of-the-leftovers-hd_640x960_h": {
+      "ver": "1.0.3",
+      "uuid": "8169c2fa-4224-44bc-b930-cb5a4eef12c0",
+      "rawTextureUuid": "d6cc56bd-ec73-489c-bba5-35adb334c01a",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 640,
+      "height": 960,
+      "rawWidth": 640,
+      "rawHeight": 960,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
